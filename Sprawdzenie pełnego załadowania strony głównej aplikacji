@@ -1,0 +1,67 @@
+Nazwa scenariusza
+Sprawdzenie pełnego załadowania strony głównej aplikacji
+
+Opis
+Zweryfikować, że strona główna aplikacji ładuje się całkowicie (HTML + zasoby + ruch AJAX) i pozostaje dostępna przez kilka sekund, nie wykonując nieoczekiwanych przekierowań.
+
+Typ scenariusza
+Test funkcjonalny / smoke
+
+Wymagania
+
+- Aplikacja posiada publicznie dostępną stronę główną.
+
+- Strona sygnalizuje pełne załadowanie poprzez document.readyState == "complete".
+
+- W razie użycia jQuery na stronie licznik jQuery.active spada do 0 po zakończeniu wszystkich żądań AJAX.
+
+- (Opcjonalnie) element loadera/spinnera znika po zakończeniu ładowania.
+
+Warunki wstępne
+
+- Zainstalowany Python 3.x, pytest, selenium, webdriver-manager.
+
+- Dostęp do internetu.
+
+Środowisko testowe umożliwia uruchomienie przeglądarki Chrome (GUI lub headless).
+
+Kroki testowe
+
+1 Uruchom przeglądarkę Chrome.
+
+2 Wejdź na stronę główną aplikacji.
+
+3Poczekaj, aż spełni się łączny warunek:
+
+- document.readyState == "complete",
+
+- brak aktywnych zapytań AJAX (jQuery.active == 0, jeśli dotyczy),
+
+- ewentualny element loader/spinner zniknie.
+
+4 Zweryfikuj w asercji, że bieżący URL zaczyna się od adresu bazowego aplikacji.
+
+5 Pozostań na stronie przez 3 sekundy.
+
+6 Zamknij przeglądarkę.
+
+Oczekiwane rezultaty
+
+1 Przeglądarka otwiera się poprawnie.
+
+2 Rozpoczyna się ładowanie strony głównej.
+
+3 Cała zawartość strony jest załadowana, interfejs gotowy do interakcji.
+
+4 Użytkownik pozostaje na stronie głównej; nie dochodzi do nieoczekiwanych przekierowań.
+
+5 Strona wyświetla się stabilnie przez cały czas pauzy, brak błędów lub nagłych zmian stanu.
+
+6 Sesja kończy się bez wyjątków, przeglądarka zamyka się prawidłowo.
+
+
+
+
+
+
+
