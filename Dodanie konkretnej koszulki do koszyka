@@ -1,0 +1,44 @@
+Nazwa scenariusza
+Dodanie konkretnej koszulki do koszyka
+
+Opis
+Zweryfikować, że użytkownik może otworzyć stronę produktu (koszulka Leicester City), dodać go do koszyka i zobaczyć pozycję w podsumowaniu zamówienia.
+
+Typ scenariusza
+Test funkcjonalny / end-to-end
+
+Wymagania
+
+- Aplikacja e-commerce wykorzystuje WooCommerce i wyświetla komunikat woocommerce-message po udanym dodaniu do koszyka.
+
+- Pozycje w koszyku renderowane są wierszami tr.cart_item.
+
+- Na stronie produktu znajduje się przycisk button.single_add_to_cart_butt
+
+Kroki testowe
+
+1 Uruchom przeglądarkę Chrome.
+
+2 Wejdź na stronę wybranego produktu (koszulka Leicester City).
+
+3 Kliknij przycisk „Dodaj do koszyka”.
+
+4 Poczekaj, aż pojawi się komunikat WooCommerce z linkiem „Zobacz koszyk” i kliknij ten link.
+
+5 W koszyku poczekaj, aż pojawi się pierwszy wiersz tr.cart_item.
+
+6 Zatrzymaj się na stronie koszyka przez 3 s i zamknij przeglądark
+
+Oczekiwany rezultat
+
+1 Przeglądarka otwiera się bez błędów.
+
+2 Strona produktu wczytuje się poprawnie.
+
+3 Po kliknięciu przycisku produkt zostaje dodany, a aplikacja wyświetla komunikat sukcesu.
+
+4 Kliknięcie linku przenosi użytkownika do koszyka.
+
+5 W koszyku widoczna jest co najmniej jedna pozycja (dodana koszulka).
+
+6 Przez 3 s strona pozostaje stabilna; następnie przeglądarka zamyka się bez wyjątków.
