@@ -1,0 +1,36 @@
+Nazwa scenariusza
+Weryfikacja ciągłości numeracji w rankingu WTA
+
+Cel
+Sprawdzić, że każda pozycja w pierwszej kolumnie tabeli z rankingiem WTA jest liczbą od 1 do N bez przerw
+
+Typ
+Test funkcjonalny / walidacyjny
+
+Warunki wstępne
+Środowisko gotowe (Python, pytest, Selenium, ChromeDriver zainstalowane).
+
+Kroki
+1 Uruchom przeglądarkę i przejdź pod adres https://live-tennis.eu/en/official-wta-ranking.
+
+2 Zaakceptuj banner cookies, jeżeli się pojawi.
+
+3 Poczekaj (do 30 s) na widoczność pierwszego wiersza tabeli (table tbody tr).
+
+4 Odczytaj wszystkie wiersze i wyciągnij z nich tekst pierwszej kolumny (td:nth-child(1)), obetnij końcową kropkę i skonwertuj do liczby całkowitej.
+
+5 Porównaj uzyskaną listę z sekwencją [1, 2, 3, …, len(lista)].
+
+Zamknij przeglądarkę.
+
+Oczekiwany rezultat
+
+1 Lista odczytanych pozycji dokładnie odpowiada sekwencji rosnącej od 1 do 1000.
+
+2 W konsoli pojawia się komunikat:
+
+3 Znaleziono 1000 pozycji i wszystkie są sekwencyjne od 1 do 1000
+
+4 Test kończy się statusem PASSED [100%].
+
+5 Przeglądarka zamyka się bez błędów.
