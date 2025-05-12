@@ -1,0 +1,49 @@
+Nazwa scenariusza
+Weryfikacja wypełniania pól logowania
+
+Opis
+Test sprawdza, że po wejściu na stronę logowania (/moje-konto/) pola „Username” i „Password” poprawnie przyjmują wpisane wartości i zachowują je w atrybucie value.
+
+Typ
+Test UI / walidacja formularza
+
+Warunki wstępne
+– Środowisko z Pythonem, pytest, selenium i ChromeDriverem gotowe do użycia.
+– Strona http://www.selenium-shop.pl/moje-konto/ jest dostępna.
+
+Kroki testowe
+Otwórz przeglądarkę
+– Uruchom Chrome za pomocą Selenium WebDriver.
+
+1 Wejdź na stronę logowania
+– Przejdź do http://www.selenium-shop.pl/moje-konto/.
+
+2 Poczekaj na wyrenderowanie pola „Username”
+– Użyj explicit wait (do 10 s) na widoczność elementu o ID="username".
+
+3 Wprowadź dane
+– W polu username wpisz wartość z zmiennej LOGIN.
+– W polu password wpisz wartość z zmiennej PASSWORD.
+
+4 Weryfikacja wprowadzonych wartości
+– Odczytaj atrybut value z pola username i porównaj z LOGIN.
+– Odczytaj atrybut value z pola password i porównaj z PASSWORD.
+
+5 Zakończ sesję
+– Zamknij przeglądarkę.
+
+Oczekiwane rezultaty
+1 Po wpisaniu danych oba pola tekstowe zawierają dokładnie wprowadzone wartości.
+
+2 Nie występują żadne błędy ani wyjątki w trakcie testu.
+
+3 Przeglądarka zamyka się prawidłowo po teście.
+
+
+
+
+
+
+
+
+
