@@ -1,0 +1,48 @@
+Nazwa scenariusza:
+Wylogowanie zalogowanego administratora
+
+Opis:
+Test sprawdza, że po poprawnym zalogowaniu administrator może rozwinąć swoje menu w pasku admina i wylogować się, po czym ponownie pojawia się formularz logowania.
+
+Typ:
+Test funkcjonalny / UI end-to-end
+
+Warunki wstępne:
+
+- Zainstalowane Python, selenium, unittest oraz ChromeDriver.
+
+- Dostępne dane administratora (LOGIN, HASLO).
+
+- Strona logowania dostępna pod /wp-login.php.
+
+Kroki testowe:
+
+1 Uruchom Chrome i przejdź do strony logowania.
+
+2 Wprowadź nazwę użytkownika i hasło, kliknij „Log In”.
+
+3 Poczekaj na pojawienie się paska admina (#wpadminbar).
+
+4 Najedź kursorem na avatar administratora (#wp-admin-bar-my-account), aby rozwinąć menu.
+
+5 Kliknij opcję „Wyloguj się” (#wp-admin-bar-logout).
+
+6 Poczekaj na powrót do formularza logowania (#loginform).
+
+7 Zamknij przeglądarkę.
+
+Oczekiwane rezultaty:
+
+1 Po kroku 2 administrator jest zalogowany i widać pasek admina.
+
+2 Po kroku 5 menu wylogowania klika poprawnie.
+
+3 Po kroku 6 ponownie pojawia się formularz logowania – test przechodzi.
+
+
+
+
+
+
+
+
