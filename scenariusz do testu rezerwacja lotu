@@ -1,0 +1,32 @@
+Nazwa scenariusza
+
+Rezerwacja lotu Boston → Berlin
+
+Cel testu
+1 Zweryfikować poprawność procesu rezerwacji lotu Boston → Berlin w aplikacji blazedemo.
+
+Typ testu
+End-to-end (E2E), funkcjonalny.
+
+Warunki wstępne
+
+1 Zainstalowany i skonfigurowany ChromeDriver.
+2 Pusty profil przeglądarki (brak ciastek i sesji).
+3 Dostęp do strony: https://www.blazedemo.com.
+
+Kroki
+
+1 Otwórz stronę główną.
+2 Wybierz trasę Boston → Berlin i kliknij Find Flights.
+3 Kliknij Choose This Flight przy pierwszej ofercie.
+4 Wypełnij formularz rezerwacji danymi pasażera i karty; zaznacz Remember me.
+5 Kliknij Purchase Flight.
+
+Oczekiwany rezultat
+
+1 Strona główna ładuje się poprawnie z tytułem BlazeDemo.
+2 Po kroku 2 przekierowanie do /reserve.php z nagłówkiem Flights from Boston to Berlin.
+3 Po kroku 3 przekierowanie do /purchase.php i widoczny formularz zakupu.
+4 Formularz przyjmuje dane bez błędów walidacji; Remember me jest zaznaczone.
+5 Po kroku 5 wyświetla się nagłówek Thank you for your purchase! i numer potwierdzenia będący ciągiem cyfr.
+
