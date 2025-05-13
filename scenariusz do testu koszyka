@@ -1,0 +1,31 @@
+Nazwa scenariusza
+Otwarcie strony koszyka i weryfikacja tytułu
+
+Opis
+Sprawdzić, że strona koszyka ładuje się poprawnie, a tytuł strony zawiera słowo „Koszyk”.
+
+Typ
+Test funkcjonalny / smoke
+
+Warunki wstępne
+
+- Środowisko testowe z Pythonem, pytest, Selenium i ChromeDriverem.
+- Strona koszyka dostępna pod adresem http://www.selenium-shop.pl/koszyk/.
+
+Kroki
+1 Uruchom przeglądarkę Chrome.
+
+2 Przejdź na stronę koszyka: http://www.selenium-shop.pl/koszyk/.
+
+3 (Opcjonalnie) Pozostań na stronie przez 5 s, by wizualnie potwierdzić załadowanie.
+
+4 Sprawdź, że w tytule przeglądarki (driver.title) znajduje się słowo „Koszyk”.
+
+5 Zamknij przeglądarkę.
+
+Oczekiwane rezultaty
+1 Strona koszyka wczytuje się bez błędów.
+
+2 Tytuł okna przeglądarki zawiera frazę „Koszyk”.
+
+3 Po zamknięciu przeglądarki nie występują żadne wyjątki.
