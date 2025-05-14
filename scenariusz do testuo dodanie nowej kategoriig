@@ -1,0 +1,32 @@
+Nazwa scenariusza
+Dodawanie nowej kategorii produktów cyfrowych 
+
+Cel testu
+Zweryfikować, czy użytkownik może zalogować się do panelu administracyjnego, przejść do listy kategorii produktów cyfrowych i dodać nową kategorię ze wszystkimi wymaganymi polami.
+
+Typ testu
+End-to-end (E2E), funkcjonalny.
+
+Warunki wstępne
+
+1 Dostęp do systemu CMS z modułem produktów cyfrowych.
+2 Istniejące konto administratora (login i hasło).
+3 Utworzona co najmniej jedna kategoria nadrzędna (np. „Kursy”).
+4 Zainstalowany i skonfigurowany ChromeDriver oraz webdriver-manager.
+5 Pusty profil przeglądarki (brak ciastek i sesji).
+
+Kroki
+
+1 Otwórz stronę logowania (/wp-login.php).
+2 Zaloguj się przy użyciu loginu i hasła.
+3 Przejdź do sekcji kategorii produktów cyfrowych (edit-tags.php?taxonomy=download_category&post_type=download).
+4 Wypełnij formularz:
+
+Nazwa: test1
+Slug: tes1
+Kategoria nadrzędna: wybierz „Kursy”.
+Opis: operacja poprawna.
+
+5 Kliknij Dodaj nową kategorię.
+6 Odczytaj listę kategorii i wyszukaj pozycję test1.
+
