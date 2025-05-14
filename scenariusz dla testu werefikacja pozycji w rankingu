@@ -1,0 +1,30 @@
+Nazwa scenariusza
+Weryfikacja sekwencyjności pozycji w oficjalnym rankingu WTA
+
+Cel testu
+Sprawdzić, czy numery pozycji w tabeli rankingu WTA na stronie live-tennis.eu są kolejne (1, 2, 3, …) bez przerw.
+
+Typ testu
+End-to-end (E2E), funkcjonalny.
+
+Warunki wstępne
+
+1 Zainstalowany i skonfigurowany ChromeDriver oraz webdriver-manager.
+2 Możliwość użycia przeglądarki w trybie headless (opcjonalnie).
+3 Dostęp do internetu i strony: https://live-tennis.eu/en/official-wta-ranking.
+4 Brak aktywnych pop-upów ani zablokowanych skryptów cookie.
+
+
+Kroki 
+1 Uruchom przeglądarkę  i otwórz stronę rankingu WTA (https://live-tennis.eu/en/official-wta-ranking).
+2 Zaakceptuj banner cookies (kliknij dowolny przycisk zawierający słowa: accept, agree, ok, rozumiem, zgadz) za pomocą skryptu JavaScript.
+3 Poczekaj, aż tabela z wierszami (table tbody tr) będzie widoczna.
+4 Pobierz wszystkie wiersze tabeli.
+5 Dla każdego wiersza odczytaj wartość z pierwszej kolumny, usuń kropkę i konwertuj na liczbę, jeśli to możliwe.
+
+Oczekiwany rezultat
+
+1 Lista odczytanych numerów jest niepusta.
+2 Numery tworzą sekwencję bez przerw: 1, 2, 3, …, N, gdzie N to liczba wierszy.
+3 Test przechodzi, jeśli lista numerów dokładnie odpowiada range(1, N+1).
+4 Wypisanie komunikatu o sukcesie wraz z liczbą pozycji.
